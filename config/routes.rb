@@ -1,7 +1,10 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
-	get "static_pages/about"
+	#get "sessions/new"
+	#get "sessions/create"
+	#get "sessions/failure"
+	get '/login', :to => 'sessions#new', :as => :login
+	get '/auth/:provider/callback', :to => 'sessions#create'
+	get '/auth/failure', :to => 'sessions#failure'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

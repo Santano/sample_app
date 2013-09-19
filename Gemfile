@@ -3,10 +3,12 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.7'
   gem 'rspec-rails', '2.13.1'
+  gem 'mysql2'
 end
 
 group :test do
